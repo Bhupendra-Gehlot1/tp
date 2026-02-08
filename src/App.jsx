@@ -4,6 +4,7 @@ import two from './images/two.jpeg'
 import three from './images/three.jpeg'
 import four from './images/four.jpeg'
 import one from './images/one.mp4'
+import celebrationSound from './sounds/audio.mp3'
 
 function App() {
   const [yesSize, setYesSize] = useState(1)
@@ -29,6 +30,12 @@ function App() {
 
   const handleYesClick = () => {
     setAccepted(true)
+
+    // Play celebration sound
+    const audio = new Audio(celebrationSound)
+    audio.volume = 0.5
+    audio.play().catch(err => console.log('Audio play failed:', err))
+
     // Create heart animation
     createHearts()
   }
