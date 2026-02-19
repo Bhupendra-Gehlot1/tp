@@ -84,7 +84,7 @@ function getAnswerText(questionNum, answer) {
     const answerMap = {
         1: { 'me': 'Me', 'you': 'You', 'both': 'Both' },
         2: { 'me': 'Me', 'you': 'You', 'equal': 'equally' },
-        3: { 'pizza': 'Pizza', 'brain': 'Brain', 'chocolate': 'Chocolate', 'biryani': 'Biryani' }
+        3: { 'Imli': 'Imli', 'brain': 'Brain', 'chocolate': 'Chocolate', 'Patti': 'Patti' }
     };
     return answerMap[questionNum][answer];
 }
