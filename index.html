@@ -1,15 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Will You Be My Valentine? 💕</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="page active">
+        <div class="hearts-background">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        <div class="welcome-container">
+            <h1 class="main-title">Hey...</h1>
+            <div class="nickname-list">
+                <p class="nickname">My Div 💕</p>
+                <p class="nickname">My Baby 👶</p>
+                <p class="nickname">My Love ❤️</p>
+                <p class="nickname">My Life 🌟</p>
+                <p class="nickname">My Rasmalai 🍮</p>
+                <p class="nickname">My Wife 💍</p>
+                <p class="nickname">My Only 🌹</p>
+                <p class="nickname">My Sardard 😌</p>
+                <p class="nickname">My Imli 🍋</p>
+                <p class="nickname">My Cat 🐱</p>
+                <p class="nickname">My Malkin Sahiba 👑</p>
+            </div>
+            <button class="start-btn" onclick="startQuiz()">Let's Begin 💖</button>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quizPage" class="page">
+        <div class="hearts-background">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        <div class="quiz-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            
+            <!-- Question 1 -->
+            <div class="question-card" id="question1">
+                <h2 class="question">Who is most Ziddi? 😤</h2>
+                <div class="options">
+                    <button class="option" onclick="checkAnswer(1, 'me')">Me</button>
+                    <button class="option correct" onclick="checkAnswer(1, 'you')">You</button>
+                    <button class="option" onclick="checkAnswer(1, 'both')">Both of us</button>
+                </div>
+                <p class="hint" id="hint1"></p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-card hidden" id="question2">
+                <h2 class="question">Who loves more? 💝</h2>
+                <div class="options">
+                    <button class="option correct" onclick="checkAnswer(2, 'me')">Me</button>
+                    <button class="option" onclick="checkAnswer(2, 'you')">You</button>
+                    <button class="option" onclick="checkAnswer(2, 'equal')">We love equally</button>
+                </div>
+                <p class="hint" id="hint2"></p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-card hidden" id="question3">
+                <h2 class="question">What is your favourite food? 😋</h2>
+                <div class="options">
+                    <button class="option" onclick="checkAnswer(3, 'Imli')">Imli</button>
+                    <button class="option correct" onclick="checkAnswer(3, 'brain')">My Brain</button>
+                    <button class="option" onclick="checkAnswer(3, 'chocolate')">Chocolate</button>
+                    <button class="option" onclick="checkAnswer(3, 'Patti')">Patti</button>
+                </div>
+                <p class="hint" id="hint3"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Message Page -->
+    <div id="finalPage" class="page">
+        <div class="hearts-background">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        <div class="final-container">
+            <h1 class="final-title">You know me so well! 🥰</h1>
+            <div class="final-message">
+                <p class="message-text">
+                    Hey my love... 💕
+                </p>
+                <p class="message-text">
+                    I want to meet you! 🌟
+                </p>
+                <p class="message-text">
+                    Even if it will be for just 10 minutes...
+                </p>
+                <p class="message-text">
+                    But I really want to meet you! 💖
+                </p>
+                <p class="message-text highlight">
+                    Let's make it happen post your exams on 27th
+                </p>
+                <p class="message-text final-plea">
+                    Please please please... 🥺
+                </p>
+                <p class="message-text">
+                    I miss you so much! ❤️
+                </p>
+            </div>
+            <div class="heart-animation">
+                💕 💖 💝 💗 💓
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
